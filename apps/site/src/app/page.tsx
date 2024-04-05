@@ -5,8 +5,8 @@ export default function Index() {
    * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div className="flex items-center justify-center h-screen">
-      <h1 className="text-center text-8xl text-green-600">Hello world!</h1>
+    <div className='flex flex-col items-center justify-center h-screen'>
+      <p className='text-red-600 text-center text-8xl'>Dashboard</p>
     </div>
   );
 }

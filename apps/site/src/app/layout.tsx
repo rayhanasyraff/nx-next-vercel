@@ -1,3 +1,4 @@
+import NavBar, { NavItems} from '@/components/navbar';
 import '@/styles/global.css';
 
 export const metadata = {
@@ -10,9 +11,30 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
+  const navItems: NavItems[] = [
+    {
+      name: 'Home',
+      href: '/',
+    },
+    {
+      name: 'Cake',
+      href: '/cake',
+    },
+    {
+      name: 'The Beatles',
+      href: '/beatles',
+    }
+  ]
+
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html>
+      <body>
+      <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
+        <NavBar navItems={navItems} />
+        <div className="flex-grow flex-1 p-6 md:p-12 overflow-y-auto">{children}</div>
+      </div>
+      </body>
     </html>
   );
 }
