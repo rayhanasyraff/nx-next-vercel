@@ -5,5 +5,22 @@
   "projectType": "application",
   "tags": [],
   "// targets": "to see all targets run: nx show project site --web",
-  "targets": {}
+  "targets": {
+    "build": {
+      "executor": "@nx/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/site",
+        "postcssConfig": "apps/site/postcss.config.js"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "."
+        },
+        "production": {
+        }
+      }
+    }
+  }
 }
