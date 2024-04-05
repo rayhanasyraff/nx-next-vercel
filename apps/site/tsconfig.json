@@ -21,6 +21,11 @@
       "node"
     ]
   },
+  "baseUrl": ".",
+  "paths": {
+    "@/*": ["./**"],
+    "/*": ["./node_modules/*"]
+  },
   "include": [
     "**/*.ts",
     "**/*.tsx",

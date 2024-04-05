@@ -6,7 +6,7 @@ export default function Index() {
    */
   return (
     <div className="flex items-center justify-center h-screen">
-      <h1 className="text-center text-8xl text-red-600">Hello world!</h1>
+      <h1 className="text-center text-8xl text-green-600">Hello world!</h1>
     </div>
   );
 }
