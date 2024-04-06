@@ -1,16 +1,33 @@
-name: CI
+name: Hello world workflow
 
 on:
   push:
     branches:
       - main
   pull_request:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
   actions: read
   contents: read
 
 jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: hello world
+        run: echo "hello world"
+        shell: bash
+  goodbye:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: goodbye world
+        run: echo "goodbye world"
+        shell: bash
   main:
     runs-on: ubuntu-latest
     steps:
