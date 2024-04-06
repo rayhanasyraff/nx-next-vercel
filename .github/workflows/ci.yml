@@ -17,5 +17,22 @@ jobs:
         with:
           bun-version: latest
 
+      - name: Restore cached npm dependencies
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress # needed for the Cypress binary
+          key: npm-dependencies-${{ hashFiles('bun.lockb') }}
+
       - run: bun install --frozen-lockfile
+
+      - name: Cache npm dependencies
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            node_modules
+            ~/.cache/Cypress # needed for the Cypress binary
+          key: npm-dependencies-${{ hashFiles('bun.lockb') }}
+
       - run: bunx nx build site
