@@ -1,4 +1,4 @@
-import NavBar, { NavItems} from '@/components/navbar';
+import NavBar, { NavItems } from '@/components/NavBar';
 import '@/styles/global.css';
 
 export const metadata = {
@@ -24,6 +24,18 @@ export default function RootLayout({
     {
       name: 'The Beatles',
       href: '/beatles',
+    },
+    {
+      name: 'Split',
+      href: '/split'
+    },
+    {
+      name: 'List',
+      href: '/list'
+    },
+    {
+      name: 'Modal',
+      href: '/modal'
     }
   ]
 

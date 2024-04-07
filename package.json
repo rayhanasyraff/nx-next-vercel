@@ -12,9 +12,7 @@
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "cssnano": "^6.1.2",
     "@million/lint": "latest",
-    "million": "latest",
     "@nx/cypress": "18.2.1",
     "@nx/eslint": "18.2.1",
     "@nx/eslint-plugin": "18.2.1",
@@ -35,6 +33,7 @@
     "babel-jest": "^29.4.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cssnano": "^6.1.2",
     "cypress": "^13.6.6",
     "eslint": "~8.57.0",
     "eslint-config-next": "14.0.4",
@@ -44,8 +43,10 @@
     "eslint-plugin-jsx-a11y": "6.7.1",
     "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-validate-filename": "^0.0.4",
     "jest": "^29.4.1",
     "jest-environment-jsdom": "^29.4.1",
+    "million": "latest",
     "nx": "18.2.1",
     "postcss": "^8.4.38",
     "prettier": "^2.6.2",
